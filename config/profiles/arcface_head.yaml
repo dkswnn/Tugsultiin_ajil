@@ -1,0 +1,17 @@
+recognition:
+  experiment_tag: arcface_head
+  method: arcface_head
+  decision_threshold: 0.55
+  margin_threshold: 0.02
+  min_detect_prob: 0.85
+  min_box_size: 24
+  cosine_gate: null
+  use_per_class_gate: false
+  use_cohort_norm: false
+  quality_gate_enabled: false
+  temporal_vote_enabled: false
+  dedupe_per_image: true
+  dedupe_session: true
+capture:
+  burst: 1
+  burst_gap_ms: 250

@@ -1,0 +1,8 @@
+{
+  "num_classes": 16,
+  "num_samples": 2520,
+  "num_train": 2016,
+  "num_val": 504,
+  "best_val_acc": 1.0,
+  "backbone_embedding": "facenet"
+}

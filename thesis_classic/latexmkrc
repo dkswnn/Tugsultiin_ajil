@@ -1,0 +1,8 @@
+# Use XeLaTeX + BibTeX; write outputs to build/
+$pdf_mode = 1;
+$pdflatex = 'xelatex -interaction=nonstopmode -file-line-error %O %S';
+$bibtex = 'bibtex %O %S';
+$bibtex_use = 1;
+$aux_dir = 'build';
+$out_dir = '.';
+$silent = 0;

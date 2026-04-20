@@ -1,0 +1,165 @@
+=== main.tex snapshots (12:30-13:20) ===
+S2yl.tex | 12:28:11 | Chat Edit: 'this is how citation should be according to our unniversity'
+Rm0E.tex | 12:37:37 | 
+Bio7.tex | 12:34:25 | 
+GY5C.tex | 12:53:45 | Chat Edit: 'hey when i saw the pdf file it is left aligned but my text has to be justified'
+iE7L.tex | 12:56:29 | Chat Edit: 'these are requirements have we done this correctly??'
+H1dk.tex | 12:58:24 | Chat Edit: 'i wanna thesis complex justify'
+SynG.tex | 12:59:59 | Chat Edit: 'still not justified as you can see'
+rdWd.tex | 13:01:05 | 
+J5Hc.tex | 13:01:22 | Chat Edit: 'just revrt it'
+4K2W.tex | 13:02:40 | 
+bm40.tex | 13:03:34 | 
+hojf.tex | 13:05:41 | Chat Edit: 'my text is somehow left aligned but it has to be justified also make sure all requirements are met '
+kPXT.tex | 13:06:22 | Chat Edit: 'my text is somehow left aligned but it has to be justified also make sure all requirements are met '
+6lnI.tex | 13:09:14 | Chat Edit: 'still all not justified'
+fR1J.tex | 13:16:21 | 
+gore.tex | 13:18:10 | Chat Edit: 'my text is not justified it is left alined is there any problem?? '
+7vZX.tex | 13:18:53 | 
+75Cn.tex | 13:20:05 | Chat Edit: 'can you check more deep like yesterday it was all good but today it is bad??'
+4JIG.tex | 13:22:36 | Chat Edit: 'can you check more deep like yesterday it was all good but today it is bad??'
+RaQF.tex | 13:35:56 | 
+K2jp.tex | 13:37:38 | Chat Edit: 'can you just revert my code to before i said to you that text is justified '
+T61M.tex | 13:38:37 | Chat Edit: 'also why is there 2 main.pdf file '
+DprF.tex | 13:41:13 | 
+mrJZ.tex | 13:44:21 | Chat Edit: 'can we just revert all of my code to one hour prior all of your bullshit corrupted my code also only keep one pdf file maybe thats  the reason why it isnt justified'
+qD8D.tex | 13:51:53 | 
+6lRb.tex | 13:54:46 | Chat Edit: 'ok'
+u0XL.tex | 13:56:24 | Chat Edit: 'just fix that already pls'
+toFC.tex | 13:57:59 | Chat Edit: 'i think it is still not justified'
+
+=== CoverPage snapshots (same day) ===
+mLiB.tex | 21:05:42 | Chat Edit: 'can you also include this two'
+kBVb.tex | 21:08:58 | Chat Edit: 'pdf  is not opening'
+w5aj.tex | 21:10:53 | Chat Edit: 'why is ТЕХНОЛОГИЙН КОЛЛЕЖ
+МЭДЭЭЛЭЛ, ХОЛБООНЫ ТЕХНОЛОГИЙН ТЭНХИМ title looking different font'
+6hX4.tex | 21:13:10 | Chat Edit: 'these are the samples'
+9OIu.tex | 21:27:11 | Chat Edit: 'positionings are bit off like aligning is not right'
+Hnoc.tex | 21:38:39 | Chat Edit: 'not aligned'
+OUiB.tex | 21:40:49 | Chat Edit: 'not again'
+FNnx.tex | 21:45:05 | 
+yYlF.tex | 21:46:55 | Chat Edit: '
+
+
+
+\begin{titlepage}
+
+
+\noindent\begin{minipage}{0.15\textwidth}
+\vspace{-20mm}
+\includegraphics[width=\linewidth]{Pictures/NCMT.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.8\textwidth}
+\centering
+\vspace{-20mm}
+\textbf{\textsc{\large \universityname}}\\
+\textbf{\textsc{\large \departmentname}}\\
+\end{minipage}
+\noindent
+
+
+\vspace{20mm}
+\RaggedLeft
+\text{ Оюутны код: }\studentID\\
+\text{ Оюутны овог нэр: }\authorsname\\
+
+
+\vspace{40mm}
+\centering
+\textbf{\large \titlename}\\
+\textbf{\normalsize /ТӨГСӨЛТИЙН СУДАЛГААНЫ АЖИЛ/}
+
+\vspace{10mm}
+\noindent\begin{minipage}{0.2\textwidth}
+
+\text{Удирдагч багш }\\
+\text{Гүйцэтгэсэн оюутан }
+\end{minipage}
+\hfill
+\begin{minipage}{0.2\textwidth}
+
+\text\supervisorname\\
+\text\authorShort\\
+\end{minipage}
+\noindent
+
+
+
+\vspace{90mm}
+
+\begin{center}
+ \cityname  \\
+ \gradYear \hspace{1pt} он
+\end{center}
+
+\end{titlepage} how about this'
+RQYA.tex | 21:50:28 | 
+oFVC.tex | 22:10:10 | Chat Edit: 'look'
+m4Q1.tex | 22:17:26 | 
+gNpZ.tex | 22:18:11 | undoRedo.source
+1ELm.tex | 22:22:10 | 
+tpVj.tex | 22:22:53 | 
+xwKi.tex | 22:25:45 | Chat Edit: 'title pages gradyear is not on bottom can you fix to the bottom title page too'
+6q8P.tex | 00:48:24 | 
+o1r0.tex | 13:32:07 | Chat Edit: 'why things that were working suddenly doesnt work and you cant fix that damn bitch'
+HcFr.tex | 13:36:21 | 
+XLXN.tex | 13:42:22 | 
+
+=== Thesis.cls snapshots (same day) ===
+2uFH.cls | 20:43:53 | Chat Edit: 'i did copied my previous years senior thesis can you also make structure look like that'
+ZIju.cls | 20:46:26 | Chat Edit: 'did you also did the changes according to requirements'
+K1dJ.cls | 20:51:25 | Chat Edit: 'did you also did the changes according to requirements'
+3qPW.cls | 21:02:27 | Chat Edit: 'this problems'
+rF74.cls | 21:11:09 | Chat Edit: 'why is ТЕХНОЛОГИЙН КОЛЛЕЖ
+МЭДЭЭЛЭЛ, ХОЛБООНЫ ТЕХНОЛОГИЙН ТЭНХИМ title looking different font'
+sGki.cls | 21:49:18 | Chat Edit: '
+this'
+W638.cls | 21:52:19 | Chat Edit: 'look at this'
+yRgI.cls | 21:54:07 | Chat Edit: 'look what is this'
+emMz.cls | 21:55:04 | 
+xfdr.cls | 21:55:31 | Chat Edit: 'look what is this'
+OvBn.cls | 21:55:56 | Chat Edit: 'look what is this'
+bGbO.cls | 21:56:12 | Chat Edit: 'look what is this'
+gfXP.cls | 21:56:35 | Chat Edit: 'look what is this'
+Bth4.cls | 21:56:54 | 
+1kJU.cls | 21:56:58 | Chat Edit: 'look what is this'
+VRID.cls | 21:57:19 | Chat Edit: 'look what is this'
+UojI.cls | 21:58:19 | Chat Edit: 'it is just syntax error everything should start with \ you know
+'
+EQcw.cls | 21:58:46 | 
+dtsg.cls | 22:03:20 | Chat Edit: 'look at the problems'
+8yhF.cls | 22:04:46 | 
+29dS.cls | 22:07:12 | 
+Z5lj.cls | 01:23:03 | Chat Edit: 'problem'
+f3bu.cls | 01:48:29 | Chat Edit: 'it says list of tables and list of figures  it has extra 2 apges'
+vg0O.cls | 02:21:46 | 
+yeNJ.cls | 02:28:23 | 
+v1rG.cls | 19:08:54 | Chat Edit: 'i mean i dont need header'
+DHQk.cls | 21:11:54 | Chat Edit: 'i dont need section between break'
+HodI.cls | 21:17:06 | Chat Edit: 'i think there are still section between break'
+oP8i.cls | 21:18:58 | Chat Edit: 'loooook'
+ys88.cls | 01:04:53 | Chat Edit: 'why is chapter 3 is looking like this'
+zeDJ.cls | 01:06:08 | Chat Edit: 'and now chapters are fucking taking break spaces between them '
+K4Z3.cls | 10:17:12 | Chat Edit: 'chapter has break i didnt know so take a page break between chapters'
+29jx.cls | 13:22:26 | Chat Edit: 'can you check more deep like yesterday it was all good but today it is bad??'
+Ufsc.cls | 13:26:02 | Chat Edit: 'all pages 
+not justified but margin is working'
+u3C5.cls | 13:26:58 | Chat Edit: 'all pages 
+not justified but margin is working'
+j6GZ.cls | 13:28:30 | Chat Edit: 'all pages 
+not justified but margin is working'
+f3vy.cls | 13:30:05 | Chat Edit: 'all pages 
+not justified but margin is working'
+x6PG.cls | 13:33:34 | Chat Edit: 'why things that were working suddenly doesnt work and you cant fix that damn bitch'
+XANe.cls | 13:36:21 | 
+4GEM.cls | 13:38:27 | Chat Edit: 'also why is there 2 main.pdf file '
+
+=== CoverPage ragged commands by snapshot ===
+-- 6q8P.tex --
+\RaggedLeft
+-- o1r0.tex --
+\begin{flushright}
+-- HcFr.tex --
+\RaggedLeft
+-- XLXN.tex -- no ragged commands

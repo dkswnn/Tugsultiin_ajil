@@ -1,0 +1,16 @@
+mtcnn==1.0.0
+facenet-pytorch==2.6.0
+torch==2.2.2
+torchvision==0.17.2
+tensorflow==2.20.0
+tf-keras
+retina-face
+numpy<2
+pillow
+matplotlib
+scikit-learn
+opencv-python
+pyyaml
+tqdm
+joblib
+pandas

@@ -1,0 +1,8 @@
+folder,best_threshold,rows_total,rows_known,rows_unknown,rows_no_face,known_unique_labels,known_rate,unknown_rate,session_file
+2026/3/30/2nd,0.66,21,1,20,0,1,0.0476,0.9524,mtcnn_flat_t66_2026-04-19_19-57-08.csv
+2026/3/30/4th,0.66,2,0,2,0,0,0.0000,1.0000,mtcnn_flat_t66_2026-04-19_19-57-08.csv
+2026/3/30/outside_period,0.66,45,0,45,0,0,0.0000,1.0000,mtcnn_flat_t66_2026-04-19_19-57-08.csv
+2026/4/6/2nd,0.66,27,3,24,0,3,0.1111,0.8889,mtcnn_flat_t66_2026-04-19_19-57-08.csv
+2026/4/9/3rd,0.66,55,5,50,0,5,0.0909,0.9091,mtcnn_flat_t66_2026-04-19_19-57-08.csv
+2026/4/9/outside_period,0.66,32,3,29,0,3,0.0938,0.9062,mtcnn_flat_t66_2026-04-19_19-57-08.csv
+misc_flat,0.66,35,8,26,1,8,0.2286,0.7429,mtcnn_flat_t66_2026-04-19_19-57-08.csv

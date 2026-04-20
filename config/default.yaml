@@ -1,0 +1,136 @@
+## Minimal config for attendance (keep it simple)
+
+paths:
+  students_dir: data/students # enrollment photos per person
+  embeddings_file: data/embeddings.npz # cache of mean embeddings per person
+  embeddings_all_file: data/embeddings_all.npz # per-image embeddings for knn
+  embeddings_aug_file: data/embeddings_aug.npz # augmented mean embeddings
+  embeddings_all_aug_file: data/embeddings_all_aug.npz # augmented per-image embeddings
+  models_dir: models
+  svm_model_file: models/classifier.joblib
+  arcface_model_file: models/arcface_head.pt
+  attendance_dir: attendance
+  captures_dir: captures
+
+embedding:
+  model: facenet # facenet (current). ArcFace-margin training is under training section.
+  enroll_aug_enabled: true # augmentation for gallery embedding build (works for cosine/knn/hybrid too)
+  enroll_aug_count: 3 # number of augmented variants per face when enabled
+  enroll_aug_hflip_prob: 0.5
+  enroll_aug_rotate_deg: 15
+  enroll_aug_affine_prob: 0.75
+  enroll_aug_blur_prob: 0.25
+  enroll_aug_occlusion_prob: 0.25
+  enroll_aug_brightness_delta: 0.12 # +/- brightness factor delta for augmented variants
+  enroll_aug_contrast_delta: 0.12 # +/- contrast factor delta for augmented variants
+
+detector:
+  backend: retinaface # retinaface | mtcnn
+  retina_confidence: 0.8 # detector-level confidence floor for RetinaFace
+
+training:
+  enabled: true
+  epochs: 50
+  batch_size: 32
+  lr: 0.0005
+  weight_decay: 0.00005
+  hidden_dim: 384
+  dropout: 0.35
+  arcface_scale: 30.0
+  arcface_margin: 0.5
+  val_ratio: 0.2
+  seed: 42
+  augmentations_per_image: 5
+  min_detect_prob: 0.9
+  unknown_threshold: 0.62
+  margin_threshold: 0.08
+  augmentation:
+    hflip_prob: 0.6
+    rotate_deg: 20
+    affine_prob: 0.8
+    brightness: 0.35
+    contrast: 0.35
+    color_prob: 0.75
+    blur_prob: 0.3
+    occlusion_prob: 0.4
+    max_occlusion_frac: 0.20
+
+camera:
+  source: rtsp://admin:camera_01@192.168.60.128:554/stream1 # webcam index or rtsp/http URL
+  width: 1920
+  height: 1088
+  fps: 15
+
+mtcnn:
+  device: "CPU:0"
+  min_face_size: 40
+  thresholds: [0.6, 0.7, 0.8]
+
+facenet:
+  image_size: 160
+  margin: 14
+
+enrollment:
+  min_cos_to_center: 0.65 # drop per-person outlier photos below this cosine to the center
+  max_per_person: null # optionally limit images per person (pick closest to center)
+
+recognition:
+  method: hybrid # "cosine", "knn", "hybrid", "svm", or "arcface_head"
+  decision_threshold: 0.75 # balanced acceptance
+  knn_k: 7 # k for knn/hybrid (best on evaluate)
+  hybrid_alpha: 0.7 # 0..1; weight for KNN vs cosine-to-mean (best on evaluate)
+  svm_c: 8.0 # used when method: svm
+  svm_kernel: rbf # used when method: svm
+  svm_gamma: scale # used when method: svm
+  mahalanobis_weight: 0.3 # 0..1; optional class-conditional augmentation inside hybrid
+  margin_threshold: 0.05 # balanced separation
+  min_detect_prob: 0.85 # keep decent detections while not too strict
+  min_box_size: 24 # allow moderately small faces
+  cosine_gate: null # disable extra strict gate
+  use_per_class_gate: false # disable adaptive per-class gate (regressed on current data)
+  per_class_gate_percentile: 0.1 # default
+  per_class_gate_min_count: 8 # require at least N enrollment images for a class gate
+  per_class_gate_cap: 0.85 # default cap
+  use_cohort_norm: false # disabled by default; enable in dedicated profile tests
+  cohort_z_threshold: 0.9 # higher = stricter open-set rejection
+  use_confusion_pair_margin: false # stricter margin only for likely look-alike class pairs
+  confusion_pair_topk: 2 # per-class nearest classes to mark as confusion pairs
+  confusion_margin_extra: 0.03 # extra mean-cos margin required for confusion pairs
+  confusion_pair_min_cos: 0.70 # only pairs above this class-centroid cosine are considered confusing
+  quality_gate_enabled: false # disable quality gate (too strict on current captures)
+  min_focus_var: 18.0 # blur gate; lower = more permissive
+  min_rel_face_area: 0.012 # min face area ratio in image
+  temporal_vote_enabled: false # disabled by default; enable in dedicated profile tests
+  temporal_vote_window: 2 # +/- window size around each prediction
+  temporal_vote_min_count: 2 # minimum same-label votes in window
+  periodic_interval_minutes: 5.0 # periodic command: capture one image every N minutes
+  periodic_required_hits: 3 # periodic command: hits needed to mark present
+  periodic_min_confirm_score: 0.75 # periodic command: minimum score to count a hit
+  periodic_min_gap_minutes: 2.0 # periodic command: min gap between counted hits per student
+  flip_average: true
+  multi_centroids: true
+  max_centroids: 3
+  dedupe_per_image: true
+  dedupe_session: true
+
+capture:
+  interval_minutes: 10 # take one photo every N minutes
+  burst: 1 # how many photos per camera burst when using --camera
+  burst_gap_ms: 250 # delay between burst frames
+  periods:
+    - name: "1st lesson"
+      start: "08:00"
+      end: "09:30"
+    - name: "2nd lesson"
+      start: "09:35"
+      end: "11:05"
+    - name: "3rd lesson"
+      start: "11:10"
+      end: "12:40"
+    - name: "4th lesson"
+      start: "13:20"
+      end: "14:50"
+    - name: "5th lesson"
+      start: "14:55"
+      end: "16:25"
+  session_prefix: "period1" # used when writing CSVs under attendance/sessions

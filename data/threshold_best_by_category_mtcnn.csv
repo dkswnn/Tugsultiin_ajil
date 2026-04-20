@@ -1,0 +1,6 @@
+category,best_threshold,rows_total,rows_known,rows_unknown,rows_no_face,known_unique_labels,known_rate,unknown_rate
+2-р паар,0.66,48,4,44,0,3,0.0833,0.9167
+3-р паар,0.66,55,5,50,0,5,0.0909,0.9091
+4-р паар,0.66,2,0,2,0,0,0.0000,1.0000
+outside_period,0.66,77,3,74,0,3,0.0390,0.9610
+misc_flat,0.66,35,8,26,1,8,0.2286,0.7429

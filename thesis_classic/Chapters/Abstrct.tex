@@ -1,0 +1,45 @@
+% Abstract page (classic style)
+    \thispagestyle{empty}
+\chapter*{}
+\vspace*{-20mm}
+\begin{center}
+{\fontsize{14pt}{16pt}\selectfont \textbf{\titlename}\par}
+\makeatletter
+\providecommand{\englishtitle}{}
+\ifx\englishtitle\@empty\relax\else
+\vspace{2mm}
+{\fontsize{12pt}{14pt}\selectfont \textbf{\englishtitle}\par}
+\fi
+\makeatother
+\end{center}
+\begin{flushright}
+\itshape
+{\normalfont\normalsize \departmentname}\\[1mm]
+\newlength{\labelWabs}\settowidth{\labelWabs}{\text{Удирдагч багш}}
+\begin{tabular}{@{}l@{\hspace{0.6em}}c@{\hspace{0.6em}}l@{}}
+\makebox[\labelWabs][r]{\text{Оюутан}} & : & \authorShort \\
+\makebox[\labelWabs][r]{\text{Удирдагч багш}} & : & \supervisorname \\
+\end{tabular}
+\end{flushright}
+% Abstract body (single column)
+\addcontentsline{toc}{chapter}{Хураангуй}
+\begin{otherlanguage}{mongolian}
+\begin{center}
+\textbf{\large Хураангуй}
+\end{center}
+\begin{justify}
+Монголын боловсролын салбарт ирц бүртгэл нь ихэвчлэн гар аргаар хийгддэг бөгөөд энэ нь багшийн цаг хугацааг ихээр зарцуулахаас гадна хүний хүчин зүйлээс шалтгаалсан алдаа гарах эрсдэлийг нэмэгдүүлдэг. Иймээс ирц бүртгэлийн үйл явцыг автоматжуулах нь багш нарын ажлын ачааллыг бууруулах, бүртгэлийн нарийвчлалыг нэмэгдүүлэх, мэдээллийн найдвартай байдлыг хангах чухал ач холбогдолтой юм.
+
+Ирц бүртгэх олон төрлийн аргачлал байдаг боловч камер ашиглан сурагчдын царайг таних технологид суурилсан шийдэл нь автоматжуулалтын түвшин өндөр, бодит цагийн горимд ажиллах боломжтой, харьцангуй найдвартай хувилбар гэж үзэгддэг. Олон улсын хэмжээнд ийм төрлийн системүүдийг боловсруулж, туршиж, тодорхой орчинд нэвтрүүлсэн туршлага бий. Харин манай улсын хувьд энэхүү чиглэл нь харьцангуй шинэ бөгөөд онол-туршилтын суурь судалгаа хязгаарлагдмал хэвээр байна.
+
+Энэхүү судалгааны ажлын хүрээнд камер ашиглан сурагчдын царайг таних, улмаар ирцийг автоматаар бүртгэх системийн загварыг боловсруулж, enrollment өгөгдөл болон бодит анги танхимын зураг дээр туршин үнэлэв. Нүүр илрүүлэх шатанд RetinaFace болон MTCNN, нүүрний онцлогийг эмбеддинг шатанд FaceNet загварыг ашигласан. Харин таних шатанд эмбеддинг-д суурилсан KNN, cosine similarity, hybrid болон SVM аргуудыг харьцуулан туршив.
+
+Leave-one-out validation-ийн дүнгээр hybrid болон k-NN арга 98.35\% gated accuracy, cosine арга 95.05\%, SVM арга 39.38\% gated accuracy үзүүлэв. Бодит ангийн туршилтын сешнүүд дээр системийн үндсэн урсгал ажиллах боломжтой нь батлагдсан ч enrollment validation-ийн өндөр үзүүлэлтийг classroom attendance accuracy-тай шууд адилтган дүгнэх боломжгүй байв. Иймээс бодит ангид зориулсан бүрэн ground truth-ээр FAR/FRR-ийг дахин баталгаажуулах шаардлагатай.
+
+Иймд камер ашигласан царай танилтад суурилсан ирц бүртгэлийн систем нь боловсролын байгууллагын орчинд үе шаттайгаар нэвтрүүлэх боломжтой ч, бодит deployment-д оруулахын өмнө ground truth архивлалт, privacy/consent, lighting-specific tuning, болон олон өдрийн статистикийн баталгаажуулалт шаардлагатай гэж дүгнэв.
+
+Түлхүүр үгс: царай танилт, ирц бүртгэл, автоматжуулалт, RetinaFace, FaceNet, KNN, косинус төстэй байдал
+\end{justify}
+\end{otherlanguage}
+
+\medskip

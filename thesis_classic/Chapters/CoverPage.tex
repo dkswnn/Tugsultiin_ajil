@@ -1,0 +1,55 @@
+\begin{titlepage}
+
+% Left logo + centered institution lines (your minipage layout)
+\noindent\begin{minipage}{0.15\textwidth}
+\vspace{-20mm}
+% Try NCMT.png first, then NMCT.png, else placeholder
+\IfFileExists{Pictures/NCMT.png}{\includegraphics[width=\linewidth]{Pictures/NCMT.png}}{%
+	\IfFileExists{Pictures/NMCT.png}{\includegraphics[width=\linewidth]{Pictures/NMCT.png}}{\fbox{\parbox[c][20mm][c]{\linewidth}{\centering LOGO}}}%
+}
+\end{minipage}
+\hfill
+\begin{minipage}{0.8\textwidth}
+\centering
+\vspace{-20mm}
+% Avoid small caps (Cyrillic fallback); use bold uppercase
+	\textbf{\large \MakeUppercase{\universityname}}\\
+	\textbf{\large \MakeUppercase{\departmentname}}\\
+\end{minipage}
+\noindent
+
+% Student metadata at right
+\vspace{20mm}
+\begin{flushright}
+\newlength{\labelWmeta}\settowidth{\labelWmeta}{\textbf{Оюутны овог нэр}}
+\begin{tabular}{@{}l@{\hspace{0.2em}}c@{\hspace{0.2em}}l@{}}
+\makebox[\labelWmeta][r]{\textbf{Оюутны код}} & : & \studentID \\
+\makebox[\labelWmeta][r]{\textbf{Оюутны овог нэр}} & : & \authorsname \\
+\end{tabular}
+\end{flushright}
+
+% Title block
+\vspace{40mm}
+\begin{center}
+	\textbf{\large \titlename}\\
+	\textbf{\normalsize /ТӨГСӨЛТИЙН СУДАЛГААНЫ АЖИЛ/}
+\end{center}
+
+% Supervisor / Student aligned with shared colon
+\vspace{10mm}
+\begin{center}
+\newlength{\labelWcv}\settowidth{\labelWcv}{\textbf{Гүйцэтгэсэн оюутан}}
+\begin{tabular}{@{}l@{\hspace{0.2em}}c@{\hspace{0.2em}}l@{}}
+\makebox[\labelWcv][r]{\textbf{Удирдагч багш}} & : & \supervisorname \\
+\makebox[\labelWcv][r]{\textbf{Гүйцэтгэсэн оюутан}} & : & \authorShort \\
+\end{tabular}
+\end{center}
+
+% Bottom city + year
+\vspace*{\fill}
+\begin{center}
+ \cityname  \\
+ \gradYear \hspace{1pt} он
+\end{center}
+
+\end{titlepage}

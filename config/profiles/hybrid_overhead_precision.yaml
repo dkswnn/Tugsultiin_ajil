@@ -1,0 +1,49 @@
+detector:
+  backend: retinaface
+  retina_confidence: 0.65
+
+embedding:
+  model: facenet
+  enroll_aug_enabled: false
+
+enrollment:
+  min_cos_to_center: 0.72
+  max_per_person: 25
+
+recognition:
+  experiment_tag: hybrid_overhead_precision
+  method: hybrid
+  decision_threshold: 0.72
+  knn_k: 3
+  hybrid_alpha: 0.5
+  mahalanobis_weight: 0.1
+  margin_threshold: 0.02
+  min_detect_prob: 0.72
+  min_box_size: 18
+  cosine_gate: null
+  use_per_class_gate: false
+  per_class_gate_percentile: 0.1
+  per_class_gate_min_count: 12
+  per_class_gate_cap: 0.90
+  use_cohort_norm: false
+  cohort_z_threshold: 1.50
+  use_confusion_pair_margin: false
+  confusion_pair_topk: 2
+  confusion_margin_extra: 0.07
+  confusion_pair_min_cos: 0.72
+  quality_gate_enabled: false
+  min_focus_var: 12.0
+  min_rel_face_area: 0.004
+  temporal_vote_enabled: false
+  flip_average: true
+  multi_centroids: true
+  max_centroids: 3
+  dedupe_per_image: true
+  dedupe_session: true
+  max_unknown_per_image: 8
+
+camera:
+  source: rtsp://admin:camera_01@192.168.60.128:554/stream1
+  width: 1920
+  height: 1088
+  fps: 15

@@ -1,0 +1,6 @@
+threshold,runtime_sec,avg_img_sec,rows_total,rows_known,rows_unknown,rows_no_face,known_unique_labels,avg_row_ms,session_file
+0.66,70.863,1.265,217,20,196,1,20,326.559,mtcnn_flat_t66_2026-04-19_19-57-08.csv
+0.70,68.876,1.230,261,20,240,1,20,263.892,mtcnn_flat_t70_2026-04-19_19-58-17.csv
+0.74,68.610,1.225,322,20,301,1,20,213.074,mtcnn_flat_t74_2026-04-19_19-59-25.csv
+0.78,68.697,1.227,402,19,382,1,19,170.887,mtcnn_flat_t78_2026-04-19_20-00-34.csv
+0.82,70.258,1.255,472,18,453,1,18,148.851,mtcnn_flat_t82_2026-04-19_20-01-44.csv

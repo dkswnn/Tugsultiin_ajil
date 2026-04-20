@@ -1,0 +1,101 @@
+% Enforce 11pt and A4 as per requirements
+\documentclass[11pt,a4paper]{Thesis}
+% Use XeLaTeX fontspec and set Times New Roman
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+% Configure babel with English main; import Mongolian support
+\usepackage[main=english]{babel}
+% Silence babel font family advisories by defining sf/tt
+\babelfont{sf}{Arial}
+\babelfont{tt}{Consolas}
+\babelprovide[import]{mongolian}
+\babelfont[mongolian]{rm}{Times New Roman}
+\setlocalecaption{mongolian}{table}{Хүснэгт}
+\setlocalecaption{mongolian}{figure}{Зураг}
+\renewcommand{\tablename}{Хүснэгт}
+\renewcommand{\figurename}{Зураг}
+% Images path (for cover page logo)
+\usepackage{graphicx}
+\graphicspath{{Pictures/}}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage{multirow}
+\usepackage{indentfirst}
+\usepackage{csquotes}
+\usepackage{biblatex}
+% Map Mongolian bibliographic strings to English to avoid missing lbx
+\DeclareLanguageMapping{mongolian}{english}
+\usepackage{multicol}
+% Better justification and character protrusion/expansion
+\usepackage[final]{microtype}
+% Centralized metadata
+\input{../Information}
+\addbibresource{Nomzui.bib}
+\usepackage{listings}
+\usepackage{caption}
+\captionsetup{labelfont=bf, textfont=it}
+\usepackage{placeins}
+
+% Toggle for including List of Tables/Figures pages
+% Set to \includeloflottrue if/when you actually have tables/figures
+\newif\ifincludeloflot
+\includeloflottrue
+
+\begin{document}
+% Allow emergency stretch to reduce overfull boxes while justifying
+\emergencystretch=1em
+\pagestyle{fancy}
+
+% --- Front matter
+%\input{Information}
+\input{Chapters/CoverPage}
+\input{Chapters/TitlePage}
+% Start roman numbering from Abstract as page i
+\clearpage
+\pagenumbering{roman}
+
+% Abstract
+%\input{Chapters/Abstract}
+\input{Chapters/Abstrct}
+
+% Front-matter lists as separate files
+\clearpage
+\input{Chapters/Contents}
+\input{Chapters/Abbrev}
+\clearpage
+\ifincludeloflot
+\input{Chapters/Tables}
+\clearpage
+\input{Chapters/Figures}
+\clearpage
+\fi
+% Start main matter with Arabic page numbering at 1
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\selectlanguage{mongolian}
+\justifying
+\input{Chapters/Plan}
+\input{Chapters/Intro}
+\input{Chapters/TheoryState}
+\input{Chapters/Methodology}
+\input{Chapters/Results}
+\input{Chapters/Conclusion}
+%\input{Chapters/plan}
+%\input{Chapters/Talarhal}
+%\input{Chapters/acrolist}
+
+% --- Bibliography
+\newpage
+\pagenumbering{roman}
+\setcounter{page}{7}
+\addtocontents{toc}{\protect\contentsline{chapter}{Ном зүй}{viii}{}}
+ \pagestyle{empty}
+\begin{multicols}{2}
+\printbibliography[heading=none]
+\end{multicols}
+
+\clearpage
+\setcounter{page}{9}
+\input{Chapters/Havsralt}
+
+\end{document}

@@ -1,0 +1,36 @@
+paths:
+  embeddings_file: data/embeddings_dual.npz
+  embeddings_all_file: data/embeddings_all_dual.npz
+
+embedding:
+  model: facenet_dual
+  fusion_alpha: 0.35
+
+recognition:
+  experiment_tag: hybrid_dual
+  method: hybrid
+  decision_threshold: 0.70
+  knn_k: 7
+  hybrid_alpha: 0.7
+  mahalanobis_weight: 0.3
+  margin_threshold: 0.05
+  min_detect_prob: 0.85
+  min_box_size: 24
+  cosine_gate: null
+  use_per_class_gate: false
+  per_class_gate_percentile: 0.1
+  per_class_gate_min_count: 8
+  per_class_gate_cap: 0.85
+  use_cohort_norm: false
+  cohort_z_threshold: 0.9
+  quality_gate_enabled: false
+  temporal_vote_enabled: false
+  flip_average: true
+  multi_centroids: true
+  max_centroids: 3
+  dedupe_per_image: true
+  dedupe_session: true
+
+capture:
+  burst: 1
+  burst_gap_ms: 250

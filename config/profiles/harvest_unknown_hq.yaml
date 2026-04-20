@@ -1,0 +1,31 @@
+paths:
+  captures_dir: captures/2026/4
+
+detector:
+  backend: mtcnn
+
+facenet:
+  image_size: 160
+  margin: 14
+
+recognition:
+  experiment_tag: harvest_unknown_hq
+  method: hybrid
+  decision_threshold: 0.82
+  knn_k: 7
+  hybrid_alpha: 0.7
+  mahalanobis_weight: 0.3
+  margin_threshold: 0.08
+  min_detect_prob: 0.80
+  min_box_size: 24
+  cosine_gate: 0.88
+  use_per_class_gate: false
+  use_cohort_norm: false
+  use_confusion_pair_margin: false
+  quality_gate_enabled: false
+  temporal_vote_enabled: false
+  flip_average: true
+  multi_centroids: true
+  max_centroids: 3
+  dedupe_per_image: true
+  dedupe_session: true

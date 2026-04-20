@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.venv/
+venv/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.env
+
+# Logs / temp
+*.log
+*.tmp
+*.bak
+.history/
+threshold_test/
+_tmp_*.py
+texput.log
+
+# Runtime outputs
+attendance/
+captures/
+outputs/
+
+# JS dependencies/build
+**/node_modules/
+web/frontend/dist/
+web/backend/dist/
+web/backend/build/
+
+# Large/binary data artifacts
+data/students/
+data/*.npz
+models/*.pt
+models/*.pth
+models/*.joblib
+models/*.onnx
+models/*.bin
+
+# Keep source/config/docs tracked
+# (No ignore rules for src/, config/, README.md, requirements.txt, main.py, thesis docs)
+
+# LaTeX generated artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.xdv
+thesis_classic/$outDir/
+thesis_classic/build/
+
+# Binary docs and media (code-only repository)
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+*.tif
+*.tiff
