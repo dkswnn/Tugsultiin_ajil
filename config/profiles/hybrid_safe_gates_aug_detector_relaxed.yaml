@@ -1,0 +1,61 @@
+paths:
+  embeddings_file: data/embeddings_aug.npz
+  embeddings_all_file: data/embeddings_all_aug.npz
+
+detector:
+  backend: retinaface
+  retina_confidence: 0.62
+
+embedding:
+  model: facenet
+  enroll_aug_enabled: false
+
+enrollment:
+  min_cos_to_center: 0.70
+  max_per_person: 25
+
+recognition:
+  experiment_tag: hybrid_safe_gates_aug_det_relaxed
+  method: hybrid
+
+  decision_threshold: 0.70
+  knn_k: 3
+  hybrid_alpha: 0.5
+  mahalanobis_weight: 0.1
+
+  margin_threshold: 0.04
+  use_confusion_pair_margin: true
+  confusion_pair_topk: 2
+  confusion_margin_extra: 0.04
+  confusion_pair_min_cos: 0.70
+
+  use_cohort_norm: true
+  cohort_z_threshold: 0.95
+
+  cosine_gate: 0.70
+  use_per_class_gate: true
+  per_class_gate_percentile: 0.10
+  per_class_gate_min_count: 8
+  per_class_gate_cap: 0.88
+
+  # Relaxed detector/quality gates
+  min_detect_prob: 0.68
+  min_box_size: 18
+  quality_gate_enabled: true
+  min_focus_var: 10.0
+  min_rel_face_area: 0.004
+
+  dedupe_per_image: true
+  dedupe_session: true
+  max_unknown_per_image: 10
+
+  temporal_vote_enabled: false
+  flip_average: true
+  multi_centroids: true
+  max_centroids: 3
+
+camera:
+  source: rtsp://admin:camera_01@192.168.60.128:554/stream1
+  width: 1920
+  height: 1088
+  fps: 15
